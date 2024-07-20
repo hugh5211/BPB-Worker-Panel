@@ -196,14 +196,9 @@ export default {
                                 'Set-Cookie': 'jwtToken=; Path=/; Secure; SameSite=None; Expires=Thu, 01 Jan 1970 00:00:00 GMT',
                                 'Content-Type': 'text/plain',
                             }
-                        });
+                        })
 
-                    default:
-                        // return new Response('Not found', { status: 404 });
-                        url.hostname = 'www.speedtest.net';
-                        url.protocol = 'https:';
-                        request = new Request(url, request);
-                        return await fetch(request);
+				
                 }
             } else {
                 return await vlessOverWSHandler(request);
